@@ -1,4 +1,4 @@
-# New Map Template
+# Spring 2024 Map
 
 ## Getting Started
 

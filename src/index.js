@@ -8,7 +8,8 @@ mapboxgl.accessToken = settings.accessToken;
 
 const map = new mapboxgl.Map(settings);
 
-map.on("load", () => {
+map.on("load", async () => {
+    const neighborhoods = await import("../data/count-by-neighborhoods.json");
     const style = map.getStyle();
 
     style.sources = {
@@ -17,4 +18,7 @@ map.on("load", () => {
     };
     style.layers.push(...custom.layers);
     map.setStyle(style);
+
+    map.getSource("neighborhoods-polygons")
+        .setData(neighborhoods);
 });
