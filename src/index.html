@@ -2,12 +2,31 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Los Angeles Historic Sites by Neighborhood</title>
     </head>
     <body>
+        <header>
+            Cataloged Historic Sites in Los Angeles by Neighborhood
+            <div>Rob Gaston, March 2024</div>
+        </header>
         <main>
             <div id="map"></div>
+            <div id="popup">
+                <div class="neighborhood-name"></div>
+                <div>
+                    <span class="count-content"></span> historic site(s) cataloged
+                </div>
+            </div>
+            <div id="legend">
+                <div># of Sites</div>
+            </div>
         </main>
+        <template id="legend-entry">
+            <div>
+                <span class="color"></span>
+                <span class="range"></span>
+            </div>
+        </template>
     </body>
     <script src="index.js" type="module"></script>
 </html>
